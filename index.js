@@ -20,7 +20,13 @@ Do the following:
    HINT: no function required
 */
 
+const votingAge = 20
 
+if (votingAge >= 18) {
+  console.log(`At ${votingAge}, you can vote. Hurray!`)
+} else {
+  console.log(`At ${votingAge}, you cannot vote yet.`)
+}
 
 /*
 Task 1b - Values (not auto tested)
@@ -34,7 +40,16 @@ Do the following:
    HINT: no function required
 */
 
+let firstThing = 20
+let secondThing = 60
 
+if (firstThing !== secondThing) {
+  firstThing = 25
+} else {
+  console.log("This will never happen in this scenario.")
+}
+
+console.log(firstThing)
 
 
 
@@ -49,7 +64,11 @@ Do the following:
    HINT: look up the Number method
 */
 
+let thisString = "1999"
 
+parseInt(thisString)
+
+console.log(thisString)
 
 
 /*
@@ -77,8 +96,8 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(age){
+  return age * 7
 }
 
 
