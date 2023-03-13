@@ -151,8 +151,8 @@ function hungryDog(pounds, years){
   if (years >= 1) {
     return dogFoodWeight(pounds)
   } else if (years < 1) {
-    return puppyFoodWeight(pounds)
-  } else "Not correct information"
+    return puppyFoodWeight(pounds, years)
+  }
 
   function dogFoodWeight(calPounds) {
     if (calPounds <= 5) {
@@ -167,15 +167,15 @@ function hungryDog(pounds, years){
     return calPounds
   }
 
-  function puppyFoodWeight(calPounds) {
-    if (calPounds >= 2 && calPounds <= 4) {
-      calPounds = calPounds * 0.10
-    } else if (calPounds >= 4 && calPounds <= 7) {
-      calPounds = calPounds * 0.05
-    } else if (calPounds >= 7 && calPounds <= 12) {
-      calPounds = calPounds * 0.04
+  function puppyFoodWeight(pounds, years) {
+    if (years >= 2/12 && years <= 4/12) {
+      pounds = pounds * 0.10
+    } else if (years >= 4/12 && years <= 7/12) {
+      pounds = pounds * 0.05
+    } else if (years >= 7/12 && years <= 12/12) {
+      pounds = pounds * 0.04
     }
-    return calPounds
+    return pounds
   }
 }
 
@@ -295,7 +295,7 @@ Using the annoyingSong function below do the following:
 const duNumber = 50
 
 function annoyingSong(changingNum){
-  return `${changingNum} bottles of soda on the wall, ${changingNum} bottles of soda, take one down pass it around, ${changingNum - 1} bottles of soda on the wall`
+  return `${changingNum} bottles of soda on the wall, ${changingNum} bottles of soda, take one down pass it around ${changingNum - 1} bottles of soda on the wall`
 }
 
 for (let i = duNumber; i >= 0; i--) {
@@ -334,6 +334,8 @@ if (checkingGrade >= 90) {
   return 'you got an F'
 }
 }
+
+console.log(`Task 7: `, grade(letterGrade))
 
 
 
