@@ -149,11 +149,9 @@ NOTE 2: This is a great time to check the tests to see what it expects, versus w
 function hungryDog(pounds, years){
 
   if (years >= 1) {
-    return finalValue = dogFoodWeight(pounds)
-    console.log(`With an age of ${years} years and a weight of ${pounds}lbs, you must feed your dog ${finalValue}.lbs of dog food`)
+    return dogFoodWeight(pounds)
   } else if (years < 1) {
-    return finalValue = puppyFoodWeight(pounds)
-    console.log(`With an age of ${years} months and a weight of ${pounds}lbs, you must feed your dog ${finalValue}.lbs of dog food`)
+    return puppyFoodWeight(pounds)
   } else "Not correct information"
 
   function dogFoodWeight(calPounds) {
@@ -180,6 +178,8 @@ function hungryDog(pounds, years){
     return calPounds
   }
 }
+
+console.log(`Task 3: `, hungryDog(50, 2))
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -251,10 +251,13 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+const kiloMeter = 5
+
+function miles(kiloLength){
+  return kiloLength * 0.621371
 }
 
+console.log(`Task 5 - Km to M: `, miles(kiloMeter))
 
 
 //Task 5b - Centimeters to Feet
@@ -265,9 +268,13 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+const centiMeter = 2000
+
+function feet(centiLength){
+  return (centiLength / 2.54) / 12
 }
+
+console.log(`Task 5 - Cm to Ft: `, feet(centiMeter))
 
 
 
@@ -285,9 +292,16 @@ Using the annoyingSong function below do the following:
 4. Each time the annoyingSong is run from this loop, it should console.log the string that was returned. 
 */
 
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
+const duNumber = 50
+
+function annoyingSong(changingNum){
+  return `${changingNum} bottles of soda on the wall, ${changingNum} bottles of soda, take one down pass it around, ${changingNum - 1} bottles of soda on the wall`
 }
+
+for (let i = duNumber; i >= 0; i--) {
+  console.log(annoyingSong(i))
+}
+
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -305,8 +319,20 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
-/*Your Code here */
+const letterGrade = 100
+
+function grade(checkingGrade){
+if (checkingGrade >= 90) {
+  return 'you got an A'
+} else if (checkingGrade >= 80 && checkingGrade <= 89) {
+  return 'you got a B'
+} else if (checkingGrade >= 70 && checkingGrade <= 79) {
+  return 'you got a C'
+} else if (checkingGrade >= 60 && checkingGrade <= 69) {
+  return 'you got a D'
+} else {
+  return 'you got an F'
+}
 }
 
 
