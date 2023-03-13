@@ -23,9 +23,9 @@ Do the following:
 const votingAge = 20
 
 if (votingAge >= 18) {
-  console.log(`At ${votingAge}, you can vote. Hurray!`)
+  console.log(`task 1 a:`, true)
 } else {
-  console.log(`At ${votingAge}, you cannot vote yet.`)
+  console.log(`task 1 a:`, false)
 }
 
 /*
@@ -45,11 +45,11 @@ let secondThing = 60
 
 if (firstThing !== secondThing) {
   firstThing = 25
+  console.log(`Task 1b: `, firstThing)
 } else {
   console.log("This will never happen in this scenario.")
 }
 
-console.log(firstThing)
 
 
 
@@ -66,9 +66,7 @@ Do the following:
 
 let thisString = "1999"
 
-parseInt(thisString)
-
-console.log(thisString)
+console.log(`Task 1c: `, Number(thisString))
 
 
 /*
@@ -80,11 +78,11 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(num1, num2){
-  return num1 * num2;
+function multiply(a, b){
+  return a * b;
 }
 
-
+console.log(`Task 1d: `, multiply(19, 48))
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -100,7 +98,7 @@ function dogYears(age){
   return age * 7
 }
 
-
+console.log(`Task 2: `, dogYears(20))
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -148,11 +146,40 @@ NOTE 2: This is a great time to check the tests to see what it expects, versus w
         So, on this one test, the weight would be 4 pounds, and the age would be 1 years old. It's expecting your function to return a decimal number of 0.2
 */  
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
+function hungryDog(pounds, years){
+
+  if (years >= 1) {
+    return finalValue = dogFoodWeight(pounds)
+    console.log(`With an age of ${years} years and a weight of ${pounds}lbs, you must feed your dog ${finalValue}.lbs of dog food`)
+  } else if (years < 1) {
+    return finalValue = puppyFoodWeight(pounds)
+    console.log(`With an age of ${years} months and a weight of ${pounds}lbs, you must feed your dog ${finalValue}.lbs of dog food`)
+  } else "Not correct information"
+
+  function dogFoodWeight(calPounds) {
+    if (calPounds <= 5) {
+      calPounds = calPounds * 0.05
+    } else if (calPounds >= 6 && calPounds <= 10) {
+     calPounds = calPounds * 0.04
+    } else if (calPounds >= 11 && calPounds <= 15) {
+      calPounds = calPounds * 0.03
+    } else if (calPounds > 15) {
+      calPounds = calPounds * 0.02
+    }
+    return calPounds
+  }
+
+  function puppyFoodWeight(calPounds) {
+    if (calPounds >= 2 && calPounds <= 4) {
+      calPounds = calPounds * 0.10
+    } else if (calPounds >= 4 && calPounds <= 7) {
+      calPounds = calPounds * 0.05
+    } else if (calPounds >= 7 && calPounds <= 12) {
+      calPounds = calPounds * 0.04
+    }
+    return calPounds
+  }
 }
-
-
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
