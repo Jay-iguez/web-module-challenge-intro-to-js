@@ -351,10 +351,33 @@ HINT - you may need to study tomorrow's content on arrays
 HINT - try looking up the .includes() method
 */
 
+let word = "Finished"
 
-function vowelCounter(/*add your code here*/) {
-  /*add your code here*/
+function vowelCounter(word) {
+  
+  let amount = 0
+
+  const vowels = [`A`, `a`, `E`, `e`, `I`, `i`, `O`, `o`, `U`, `u`, `Y`, `y`]
+
+  
+  for (let i = 0; i < word.length; i++) {
+    if (vowels.includes(word[i])) {
+      
+      amount ++
+      
+    }
+    
+  } 
+  
+ return amount
+  
 }
+
+console.log(vowelCounter(word))
+
+//const dog = vowelList[2]
+
+//console.log(dog)
 
 
 
